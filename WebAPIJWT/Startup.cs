@@ -21,7 +21,7 @@ namespace WebAPIJWT
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -45,6 +45,7 @@ namespace WebAPIJWT
                             Url = new Uri("https://github.com/fmarteletto")
                         }
                     });
+                
             });
 
 
@@ -76,7 +77,6 @@ namespace WebAPIJWT
 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -106,7 +106,6 @@ namespace WebAPIJWT
             });
 
 
-            // Ativando middlewares para uso do Swagger
             app.UseSwagger();
 
 
