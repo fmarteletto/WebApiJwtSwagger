@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebAPIJWT",
+    "\\WebAPIJWT\\bin\\Debug",
+    "\\WebAPIJWT\\bin\\Release",
+    "\\WebAPIJWT\\Controllers",
+    "\\WebAPIJWT\\Model",
+    "\\WebAPIJWT\\obj",
+    "\\WebAPIJWT\\obj\\Release",
+    "\\WebAPIJWT\\Properties",
+    "\\WebAPIJWT\\Service"
+  ],
+  "SelectedNode": "\\WebAPIJWT\\Controllers\\ExemploController.cs",
+  "PreviewInSolutionExplorer": false
+}

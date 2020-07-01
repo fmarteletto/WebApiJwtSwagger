@@ -103,4 +103,4 @@ C:\Users\flavio.marteletto\Desktop\Aplicativos\WebAPIJWT\WebAPIJWT\bin\Debug\net
 C:\Users\flavio.marteletto\Desktop\Aplicativos\WebAPIJWT\WebAPIJWT\obj\Debug\netcoreapp3.1\WebAPIJWT.csproj.CoreCompileInputs.cache
 C:\Users\flavio.marteletto\Desktop\Aplicativos\WebAPIJWT\WebAPIJWT\obj\Debug\netcoreapp3.1\WebAPIJWT.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\flavio.marteletto\Desktop\Aplicativos\WebAPIJWT\WebAPIJWT\obj\Debug\netcoreapp3.1\WebAPIJWT.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\flavio.marteletto\Desktop\Aplicativos\WebAPIJWT\WebAPIJWT\obj\Debug\netcoreapp3.1\WebAPIJWT.csprojAssemblyReference.cache
+C:\Users\flavio.marteletto\Desktop\Aplicativos\WebAPIJWT\WebAPIJWT\bin\Debug\netcoreapp3.1\WebAPIJWT.xml

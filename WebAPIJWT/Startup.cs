@@ -6,9 +6,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
 using Microsoft.OpenApi.Models;
 using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace WebAPIJWT
 {
@@ -31,7 +32,8 @@ namespace WebAPIJWT
             services.AddControllers();
 
 
-            services.AddSwaggerGen(c => {
+            services.AddSwaggerGen(c =>
+            {
 
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
@@ -45,7 +47,41 @@ namespace WebAPIJWT
                             Url = new Uri("https://github.com/fmarteletto")
                         }
                     });
-                
+
+
+
+                var filePath = Path.Combine(System.AppContext.BaseDirectory, "WebAPIJWT.xml");
+                c.IncludeXmlComments(filePath);
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+
+                    Description = "Insira o JWT {Seu Token}",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Scheme = "oauth2",
+                            Name = "Bearer",
+                            In = ParameterLocation.Header,
+
+                        },
+                        new List<string>()
+                    }
+                });
+
             });
 
 
@@ -57,8 +93,7 @@ namespace WebAPIJWT
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-                .AddJwtBearer(x =>
+            }).AddJwtBearer(x =>
                 {
                     x.RequireHttpsMetadata = false;
                     x.SaveToken = true;
@@ -76,6 +111,7 @@ namespace WebAPIJWT
                 });
 
         }
+
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -108,8 +144,8 @@ namespace WebAPIJWT
 
             app.UseSwagger();
 
-
-            app.UseSwaggerUI(c => {
+            app.UseSwaggerUI(c =>
+            {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Auth JWT");
             });
 

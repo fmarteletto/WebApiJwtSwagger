@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPIJWT</name>
+    </assembly>
+    <members>
+        <member name="T:WebAPIJWT.Controllers.AuthController">
+            <Summary>
+             Controller Login
+            </Summary>
+        </member>
+        <member name="M:WebAPIJWT.Controllers.AuthController.Post(WebAPIJWT.Controllers.Usuario)">
+            <summary>
+            Metodo Utilizado para realizar Login do Usuario
+            </summary>
+            <remarks>Realize a requisicao para gerar o token de acesso</remarks>
+            <param name="user"></param>
+            <returns>Token de Acesso</returns>
+            <response code="200">Login bem sucedido</response>
+        </member>
+        <member name="T:WebAPIJWT.Controllers.ExemploController">
+            <Summary>
+             Controller Exemplo
+            </Summary>
+        </member>
+        <member name="T:WebAPIJWT.Controllers.Usuario">
+            <summary>
+            Classe que representa o Usuario
+            </summary>
+            <example>Usuario para acesssar determinada funcionalidade</example>
+        </member>
+        <member name="P:WebAPIJWT.Controllers.Usuario.Id">
+            <summary>
+            Id do Usuario, Idenfificação unica
+            </summary>
+            <example>1</example>
+        </member>
+        <member name="P:WebAPIJWT.Controllers.Usuario.Nome">
+            <summary>
+            Nome do Usuario
+            </summary>
+            <example>Flavio Marteletto</example>
+        </member>
+        <member name="P:WebAPIJWT.Controllers.Usuario.Email">
+            <summary>
+            Email do Usuario
+            </summary>
+            <example>flavio_marteletto@hotmail.com</example>
+        </member>
+        <member name="P:WebAPIJWT.Controllers.Usuario.Role">
+            <summary>
+            Nivel de Permissão
+            </summary>
+            <example>Administrador/Usuario</example>
+        </member>
+    </members>
+</doc>

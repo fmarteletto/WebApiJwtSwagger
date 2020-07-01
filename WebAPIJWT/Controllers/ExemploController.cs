@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace WebAPIJWT.Controllers
 {
 
-
+    ///<Summary>
+    /// Controller Exemplo
+    ///</Summary>
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
@@ -49,8 +51,6 @@ namespace WebAPIJWT.Controllers
 
 
         }
-
-
 
         [HttpGet]
         [AllowAnonymous]
